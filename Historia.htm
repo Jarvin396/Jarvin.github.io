@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Historia de Tabasco</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #166534;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1rem 2rem;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 1.2rem;
+      width: 20px;
+      height: 20px;
+      background: #10b981;
+      border-radius: 50%;
+      border: 3px solid white;
+      z-index: 10;
+    }
+
+    .timeline-item.left::before {
+      right: -10px;
+    }
+
+    .timeline-item.right::before {
+      left: -10px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item, .timeline-item.left, .timeline-item.right {
+        width: 100%;
+        left: 0 !important;
+        text-align: left;
+        padding-left: 3rem;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item::before {
+        left: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-green-200 to-green-500 text-gray-800 font-sans leading-relaxed">
+  <header class="bg-green-800 text-white py-6 shadow-lg">
+    <h1 class="text-4xl text-center font-bold">🌿 Historia de Tabasco</h1>
+    <p class="text-center mt-2 text-lg">Un viaje a través del tiempo en la tierra del cacao y los ríos</p>
+  </header>
+
+  <main class="p-8 max-w-5xl mx-auto">
+    <!-- Sección narrativa -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold mb-4">🗿 Raíces Prehispánicas</h2>
+      <p>Tabasco fue hogar de grandes civilizaciones como los olmecas, considerados la cultura madre de Mesoamérica. En sitios como La Venta florecieron monumentales cabezas colosales y complejas estructuras ceremoniales hace más de 3,000 años.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold mb-4">⚔️ Época Colonial</h2>
+      <p>En 1518, Juan de Grijalva exploró las costas tabasqueñas, seguido por Hernán Cortés en 1519, quien libró la Batalla de Centla contra los mayas chontales. Tras la victoria, recibió de los locales a la famosa intérprete Malintzin (La Malinche).</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold mb-4">🎓 Siglo XIX y Revoluciones</h2>
+      <p>Tabasco participó activamente en la Independencia de México. Posteriormente, sufrió invasiones extranjeras, como la estadounidense en 1847 y la francesa en 1863. Fue un bastión rebelde en distintas épocas.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold mb-4">🔥 Tabasco Revolucionario</h2>
+      <p>Durante el siglo XX, el estado vivió etapas de agitación política, especialmente bajo el gobierno de Tomás Garrido Canabal, quien impulsó un fuerte anticlericalismo y modernización forzada. Más tarde, se convirtió en un importante centro petrolero.</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold mb-4">🌎 Tabasco Hoy</h2>
+      <p>Con su riqueza natural, ríos abundantes, zonas arqueológicas y producción de cacao y plátano, Tabasco es una joya cultural y ecológica del sureste mexicano, con gran proyección turística y agrícola.</p>
+    </section>
+
+    <!-- Línea del tiempo -->
+    <h2 class="text-3xl font-bold text-center my-10">🕰️ Línea del Tiempo Interactiva</h2>
+<div class="timeline">
+  <div class="timeline-item left reveal">
+    <h3 class="text-2xl font-semibold">🗿 1200 a.C. – La Cultura Olmeca</h3>
+    <p>La Venta se convierte en un centro ceremonial importante. Nace la civilización madre.</p>
+  </div>
+  <div class="timeline-item right reveal">
+    <h3 class="text-2xl font-semibold">⛵ 1519 – Llegada de los Españoles</h3>
+    <p>Hernán Cortés llega a Tabasco y se enfrenta en la Batalla de Centla. Recibe a La Malinche.</p>
+  </div>
+  <div class="timeline-item left reveal">
+    <h3 class="text-2xl font-semibold">📜 1824 – Estado Libre</h3>
+    <p>Tabasco se incorpora oficialmente a la federación como estado libre y soberano.</p>
+  </div>
+  <div class="timeline-item right reveal">
+    <h3 class="text-2xl font-semibold">🔥 1930 – Garridismo</h3>
+    <p>Gobierno de Tomás Garrido Canabal. Reforma agraria y campañas anticlericales.</p>
+  </div>
+  <div class="timeline-item left reveal">
+    <h3 class="text-2xl font-semibold">🛢️ 1970s – Auge Petrolero</h3>
+    <p>Se descubren grandes yacimientos de petróleo, impulsando la economía local.</p>
+  </div>
+  <div class="timeline-item right reveal">
+    <h3 class="text-2xl font-semibold">🌎 Actualidad</h3>
+    <p>Tabasco destaca por su biodiversidad, cultura viva y riqueza histórica.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  <footer class="bg-green-900 text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Historia de Tabasco - Torres</p>
+  </footer>
+
+  <!-- Script para animaciones -->
+  <script>
+    const revealElements = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 50) {
+          el.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>

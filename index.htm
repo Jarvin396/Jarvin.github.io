@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabasco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Bodoni, serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Banner con diseño responsive en columnas */
+    .banner {
+      background-image: url('https://i0.wp.com/www.turimexico.com/wp-content/uploads/2015/06/cerro.jpg?w=630&ssl=1');
+      background-size: cover;
+      background-position: center;
+      color: rgb(246, 246, 248);
+      padding: 60px 30px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap; /* Para que baje en pantallas pequeñas */
+    }
+
+    .text-column {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .text-column h2 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .text-column h1 {
+      font-size: 60px;
+      margin: 10px 0;
+    }
+
+    .image-column {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-column img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Tabla de navegación */
+    .nav-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Monaco, monospace;
+    }
+
+    .nav-table td {
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .nav-table a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+    }
+
+    .section-image {
+      background: url('https://visita.comalcalco.gob.mx/gallery/MZTWaKk2iNfy8c5xVJ9iSp4jY7yN5p7j6JFxIxR0.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+    }
+
+    .final-text {
+      text-align: center;
+      font-size: 45px;
+      padding: 40px;
+      margin: 0;
+    }
+
+    /* Responsive ajustes */
+    @media (max-width: 768px) {
+      .text-column h1 {
+        font-size: 40px;
+      }
+
+      .text-column h2 {
+        font-size: 30px;
+      }
+
+      .nav-table td {
+        display: block;
+        width: 100%;
+        padding: 15px;
+      }
+
+      .final-text {
+        font-size: 30px;
+        padding: 30px 20px;
+      }
+
+      .section-image {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner con texto + imagen -->
+  <div class="banner">
+    <div class="banner-content">
+      <div class="text-column">
+        <h2>CONOCE</h2>
+        <h1>T A B A S C O</h1>
+      </div>
+      <div class="image-column">
+        <img src="https://tabasco.gob.mx/sites/default/files/2023-03/PRESENTACI%C3%93n%20a%20medios%20%286%29.jpg" alt="Tabasco">
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú de navegación -->
+  <table class="nav-table">
+    <tr>
+      <td style="background-color: #13fff3;"><a href="Inicio.htm">Inicio</a></td>
+      <td style="background-color: #ff00aa;"><a href="Municipios.htm">Municipios</a></td>
+      <td style="background-color: #2ce2bb;"><a href="Gastronomia.htm">Gastronomía</a></td>
+      <td style="background-color: #c940ab;"><a href="Historia.htm">Historia</a></td>
+      <td style="background-color: #458992;"><a href="Turismo.htm">Turismo</a></td>
+      <td style="background-color: #5af88f;"><a href="Multimedia.htm">Multimedia</a></td>
+
+    </tr>
+  </table>
+
+  <!-- Imagen de fondo -->
+  <div class="section-image"></div>
+
+  <!-- Texto final -->
+  <p class="final-text">¡VEN Y CONOCE EL EDÉN DE MÉXICO!</p>
+
+</body>
+</html>

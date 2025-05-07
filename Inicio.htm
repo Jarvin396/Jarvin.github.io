@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Descubre Tabasco</title>
+  <style>
+    :root {
+      --primary: #006400;
+      --primary-light: #228B22;
+      --text-light: #fff;
+      --text-dark: #333;
+      --bg-light: #f0f4f8;
+      --bg-dark: #121212;
+      --card-bg: #fff;
+      --card-bg-dark: #1e1e1e;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+      }
+      main, header {
+        background-color: var(--card-bg-dark);
+      }
+      nav, footer {
+        background-color: #1a3f1a;
+      }
+      nav a {
+        color: #f1f1f1;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--primary-light));
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: var(--primary-light);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      transform: scale(1.05);
+    }
+
+    main {
+      max-width: 1000px;
+      background: var(--card-bg);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    main img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      main {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Descubre Tabasco</h1>
+    <p>Un paraíso natural en el sureste de México</p>
+  </header>
+
+  <main>
+    <img src="https://tabasco.gob.mx/sites/default/files/2023-03/PRESENTACI%C3%93n%20a%20medios%20%286%29.jpg" alt="Tabasco">
+
+    <h2>Bienvenido a Tabasco</h2>
+    <p>
+      Localizado en el sureste del país, Tabasco le hace honor a su nombre en náhuatl: <strong>“lugar donde la tierra está húmeda”</strong>. Esta es la tierra de los olmecas, «el pueblo del hule».
+    </p>
+    <p>
+      Colinda con Veracruz, Chiapas y Campeche, y es bañado por el Golfo de México. Su paisaje se compone de <strong>selva, sabana, manglar, pantano y costa</strong>, que dan refugio a una extensa fauna terrestre y marina.
+    </p>
+    <p>
+      Tabasco cuenta con infinidad de atractivos:
+    </p>
+    <ul>
+      <li><strong>Arqueológicos</strong>: La Venta, Comalcalco y Pomoná.</li>
+      <li><strong>Naturales</strong>: cascadas, grutas, pantanos, playas, ríos y esteros.</li>
+      <li><strong>Típicos</strong>: Tapijulapa, Villa Luz y Jalpa.</li>
+    </ul>
+
+    <div class="gallery">
+      <img src="https://www.gob.mx/cms/uploads/article/main_image/83629/Cascadas-de-Villa-Luz_tabasco_tapijulapa_por-las-cascadas-de-villa-luz_01.jpg" alt="Tapijulapa">
+      <img src="https://www.razon.com.mx/resizer/v2/6JFWXO2CXBGYHFJDWRM3AXHH6M.jpeg?auth=a7067e0fc84bfa774b0619a3dc85fb3d7d0501daa021aa648dbe7c5e51de91ff&smart=true&width=1100&height=550&quality=75" alt="Parque Museo La Venta">
+      <img src="https://www.gob.mx/cms/uploads/article/main_image/67791/anp_pantano_de_centla_.jpg" alt="Pantano Tabasco">
+      <img src="https://elmomentotabasco.mx/wp-content/uploads/2024/09/Diseno-sin-titulo-31.png" alt="Comalcalco">
+    </div>
+  </main>
+
+</body>
+</html>
